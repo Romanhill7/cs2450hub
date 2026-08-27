@@ -1,7 +1,7 @@
 import random
 def ageGuesser():
     print("Welcome. This program will try and guess your age. What is your name?")
-    username=input("Enter name")
+    username=input("Enter name: ")
     Ages = list(range(15,41))
     guessed = False
     while guessed==False:
@@ -10,7 +10,7 @@ def ageGuesser():
         cur_guess=input(f"Is your age {guess}? Y/N")
         if cur_guess == "y" or cur_guess == "Y":
             guessed = True
-            print("{username} is {guess} years old.")
+            print(f"{username} is {guess} years old.")
         else:
             print("Rats")
             Ages.pop(guess_index)
